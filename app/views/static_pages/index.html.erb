@@ -17,12 +17,6 @@
       </form>
 
       <% if user_signed_in? %>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-        </a>
-      </li>
       
       <li class="nav-item">
         <a class="nav-link" href="#">
@@ -36,7 +30,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          </a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
