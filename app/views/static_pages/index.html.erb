@@ -19,7 +19,7 @@
       
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Déconnexion
+          Déconnexion
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">
@@ -28,6 +28,22 @@
           <a class="dropdown-item" href="#">
             <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
           </a>
+        </div>
+      </li>
+
+      <% else %>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Connexion
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">
+          <%= link_to "Se connecter", new_user_session_path %>
+        </a>
+        <a class="dropdown-item" href="#">
+          <%= link_to "S'inscrire", new_user_registration_path %>
+        </a>
         </div>
       </li>
 
