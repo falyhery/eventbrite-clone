@@ -8,7 +8,7 @@
     <ul class="navbar-nav">
 
     <li class="nav-item">
-      Organiser
+      Organiser  
     </li>
 
     <li>
@@ -16,7 +16,7 @@
 
     <% if user_signed_in? %>
     <li class="nav-item">
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      <%= link_to "Sign out  ", destroy_user_session_path, method: :delete %>
     </li>
 
     <li>
@@ -24,20 +24,20 @@
     </li>
 
     <li>
-      <%= link_to "Secret page", static_pages_secret_path %>
+      <%= link_to "Secret page  ", static_pages_secret_path %>
     </li>
 
     <li>
-      <%= link_to "Edit email / password", edit_user_registration_path %>
+      <%= link_to "Edit email / password  ", edit_user_registration_path %>
     </li>
 
   <% else %>
     <li>    
-      <%= link_to "Sign in", new_user_session_path %>
+      <%= link_to "Sign in  ", new_user_session_path %>
     </li>
 
     <li>
-      <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to "Sign up  ", new_user_registration_path %>
     </li>
 
   <% end %>
