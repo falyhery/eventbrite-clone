@@ -7,28 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">Organiser</a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          S'inscrire / Se connecter
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">S'inscrire</a>
-          <a class="dropdown-item" href="#">Se connecter</a>
-        </div>
-      </li>
-
-    </ul>
-  </div>
-</nav>
-</header>
-
-
-<ul>
-  <% if user_signed_in? %>
+    <% if user_signed_in? %>
     <li>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
     </li>
@@ -55,4 +34,8 @@
     </li>
 
   <% end %>
-</ul>
+
+    </ul>
+  </div>
+</nav>
+</header>
