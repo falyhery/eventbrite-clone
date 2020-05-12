@@ -10,33 +10,31 @@
     <li class="nav-item">
       Organiser  
     </li>
-
-    <li>
-    </li>
+    </br>
 
     <% if user_signed_in? %>
     <li class="nav-item">
       <%= link_to "Sign out  ", destroy_user_session_path, method: :delete %>
     </li>
 
-    <li>
+    <li class="nav-item">
       Voici ton email : <%= current_user.email %>
     </li>
 
-    <li>
+    <li class="nav-item">
       <%= link_to "Secret page  ", static_pages_secret_path %>
     </li>
 
-    <li>
+    <li class="nav-item">
       <%= link_to "Edit email / password  ", edit_user_registration_path %>
     </li>
 
   <% else %>
-    <li>    
+    <li class="nav-item">
       <%= link_to "Sign in  ", new_user_session_path %>
     </li>
 
-    <li>
+    <li class="nav-item">
       <%= link_to "Sign up  ", new_user_registration_path %>
     </li>
 
