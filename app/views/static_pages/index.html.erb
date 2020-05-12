@@ -19,24 +19,34 @@
     </li>
 
     <li class="nav-item">
+      <a class="nav-link" href="">
       Voici ton email : <%= current_user.email %>
+      </a>
     </li>
 
     <li class="nav-item">
+      <a class="nav-link" href="">
       <%= link_to "Secret page  ", static_pages_secret_path %>
+      </a>
     </li>
 
     <li class="nav-item">
+      <a class="nav-link" href="">
       <%= link_to "Edit email / password  ", edit_user_registration_path %>
+      </a>
     </li>
 
   <% else %>
     <li class="nav-item">
+      <a class="nav-link" href="">
       <%= link_to "Sign in  ", new_user_session_path %>
+      </a>
     </li>
 
     <li class="nav-item">
+      <a class="nav-link" href="">
       <%= link_to "Sign up  ", new_user_registration_path %>
+      </a>
     </li>
 
   <% end %>
