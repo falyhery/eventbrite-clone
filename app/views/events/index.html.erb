@@ -1,1 +1,55 @@
-<h1>hello world !</h1>
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="">
+    <%= link_to events_index_path do %>
+    <%= image_tag 'Eventbrite_logo_2018.png' %>
+    <% end %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+
+      <form class="form-inline">
+        <button class="btn btn-outline-success" type="button">Organiser</button>
+      </form>
+
+      <% if user_signed_in? %>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Déconnexion
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">
+            <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+          </a>
+          <a class="dropdown-item" href="#">
+            <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+          </a>
+        </div>
+      </li>
+
+      <% else %>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Connexion
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">
+          <%= link_to "Se connecter", new_user_session_path %>
+        </a>
+        <a class="dropdown-item" href="#">
+          <%= link_to "S'inscrire", new_user_registration_path %>
+        </a>
+        </div>
+      </li>
+
+      <% end %>
+
+    </ul>
+  </div>
+</nav>
+</header>
